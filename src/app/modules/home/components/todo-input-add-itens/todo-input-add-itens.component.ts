@@ -9,19 +9,24 @@ export class TodoInputAddItensComponent implements OnInit{
 
   
   @Output() public emitItemTaskList = new EventEmitter();
+  @Output() public emitDate = new EventEmitter();
   public addItemTaskList: string = "";
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   public submitItemTaskList(){
 
     this.addItemTaskList = this.addItemTaskList.trim();
     if(this.addItemTaskList){
-          this.emitItemTaskList.emit(this.addItemTaskList);
+        this.emitItemTaskList.emit(this.addItemTaskList);
     this.addItemTaskList = ""; 
     }
  
   }
+
 
 }

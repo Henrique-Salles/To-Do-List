@@ -28,7 +28,7 @@ export class TodoListComponent implements OnInit, DoCheck{
   }
 
   public setEmitTaskList(event: string) {
-    this.taskList.push({task: event, checked: false});
+    this.taskList.push({task: event, checked: false, createdAt: new Date()});
   }
 
   ngDoCheck(): void {
@@ -52,10 +52,6 @@ export class TodoListComponent implements OnInit, DoCheck{
     }
   }
 
+//  public currentTime = new Date(year, monthIndex);
+
 }
-
-
-
-
-
-//TO DO: 
